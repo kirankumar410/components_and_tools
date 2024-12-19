@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components and Tools Library</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0056b3;
+            padding: 0.5rem 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        nav a:hover {
+            background-color: #004494;
+        }
+        .container {
+            padding: 2rem;
+        }
+        .component-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .component-card h3 {
+            margin: 0 0 0.5rem;
+        }
+        .component-card img {
+            width: 100%;
+            max-width: 300px;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        footer {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+    <script>
+        function loadPage(page) {
+            const content = {
+                home: `
+                    <h2>Welcome to the Components and Tools Library</h2>
+                    <p>Your one-stop resource for learning about electronics components and tools.</p>
+                `,
+                components: `
+                    <div class="component-card">
+                        <h3>Resistor</h3>
+                        <img src="https://media.istockphoto.com/id/1299261921/photo/various-electronic-components-on-detail-of-printed-circuit-board-electrotechnics.jpg?s=2048x2048&w=is&k=20&c=WQkbG_2dYvUe0E7LzS_taRUj7C3vx9HqcM12E24ff2Y=" alt="Resistor">
+                        <p>A resistor is a passive component that limits current flow in a circuit.</p>
+                    </div>
+                    <div class="component-card">
+                        <h3>Capacitor</h3>
+                        <img src="https://www.build-electronic-circuits.com/wp-content/uploads/2013/05/electrolytic-capacitor.jpg" alt="Capacitor">
+                        <p>A capacitor stores and releases electrical energy in a circuit.</p>
+                    </div>
+                    <div class="component-card">
+                        <h3>Diode</h3>
+                        <img src="https://cdn1.byjus.com/wp-content/uploads/2023/02/Diodes-1.png" alt="Diode">
+                        <p>A diode allows current to flow in one direction and blocks it in the opposite direction.</p>
+                    </div>
+                `,
+                tools: `
+                    <div class="component-card">
+                        <h3>Multimeter</h3>
+                        <img src="https://media.istockphoto.com/id/1389142107/photo/electrician-engineer-uses-a-multimeter-to-test-the-electrical-installation-and-power-line.jpg?s=2048x2048&w=is&k=20&c=uixG4e4UYs4U-cN7ucv4KLVqLZLEtkofCN5Wih7zImo=" alt="Multimeter">
+                        <p>A multimeter is used to measure voltage, current, and resistance.</p>
+                    </div>
+                    <div class="component-card">
+                        <h3>Oscilloscope</h3>
+                        <img src="https://www.shutterstock.com/shutterstock/photos/1982713346/display_1500/stock-photo-modern-mixed-signal-oscilloscope-in-laboratory-1982713346.jpg" alt="Oscilloscope">
+                        <p>An oscilloscope displays voltage signals as waveforms over time.</p>
+                    </div>
+                    <div class="component-card">
+                        <h3>Soldering Iron</h3>
+                        <img src="https://www.noelindia.com/cdn/shop/products/SolderingIron50watt_ec7c8fbb-fc16-4414-a13b-5d31bb8671da.jpg?v=1622891579" alt="Soldering Iron">
+                        <p>A soldering iron is used to join electronic components by melting solder.</p>
+                    </div>
+                `,
+                about: `
+                    <p>We aim to provide comprehensive information about various electronics components and tools to enthusiasts and professionals alike.</p>
+                `
+            };
+            document.getElementById('content').innerHTML = content[page];
+        }
+    </script>
+</head>
+<body onload="loadPage('home')">
+    <header>
+        <h1>Components and Tools Library</h1>
+    </header>
+
+    <nav>
+        <a onclick="loadPage('home')">Home</a>
+        <a onclick="loadPage('components')">Components</a>
+        <a onclick="loadPage('tools')">Tools</a>
+        <a onclick="loadPage('about')">About</a>
+    </nav>
+
+    <div class="container" id="content">
+        <!-- Dynamic content will be loaded here -->
+    </div>
+
+    <footer>
+        <p>&copy; A Web App by Kiran kumar Attada</p>
+    </footer>
+</body>
+</html>
